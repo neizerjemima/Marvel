@@ -113,5 +113,29 @@ footer {
 }
 
 
+/*lightbox rulesb here*/
 
+.lightbox {
+  width: 100vw; /*vw = viewport width => screen width */
+  height: 100vh; /*vw = viewport height => screen width */
 
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.925);
+  display: none;
+}
+
+.lightbox article {
+  width: 55%;
+  margin-left: 40%;
+  padding-top: 50px;
+}
+
+.lb_text, .lb_heading { text-align: left;}
+
+.lb_text {
+  line-height: 1.6 !important;
+  margin-left: 0;
+  padding-top: 2em;
+}
