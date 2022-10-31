@@ -1,9 +1,9 @@
 /* these all apply to the body image*/
 * {
-  border: none;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box; 
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
 }
 
 .hidden { display: none; }
@@ -11,18 +11,18 @@
 html, body { height: 100% }
 
 body { 
-font-family: sans-serif;
-background-color: black;
-color: white;
-background-image: url('../images/denim.png');
+  font-family: sans-serif;
+  background-color: black;
+  color: white;
+  background-image: url('../images/denim.png');
 }
 
 /* main header rules*/
 header {
-background-color: rgba(255, 0, 0, 0.945);
-position: sticky;
-top: 0;
-text-align: center;
+  background-color: rgba(255, 0, 0, 0.945);
+  position: sticky;
+  top: 0;
+  text-align: center;
 }
 
 
@@ -32,70 +32,81 @@ text-align: center;
 
 /* main rules here */
 #character_nav {
-text-align: center;
-background-color: rgba(12, 12, 12, 0.781);
+  text-align: center;
+  background-color: rgba(12, 12, 12, 0.781);
 
-background-image: url('../images/characters_art_mas_mob_01.jpeg');
-background-repeat: no-repeat;
-background-size: cover;
-background-blend-mode:multiply;
+  background-image: url('../images/characters_art_mas_mob_01.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode:multiply;
 }
 
 .characters { list-style-type: none;}
 .characters li { 
-display: inline-block;
-height: 220px;
-margin: 10px 8px;
+  display: inline-block;
+  height: 220px;
+  margin: 10px 8px;
 
-background-color: rgb(27, 27, 27);
+  background-color: rgb(27, 27, 27);
 
-text-align: center;
+  text-align: center;
 
-cursor: pointer;
+  cursor: pointer;
 }
 
 .characters li h5 {
-color: white;
-padding: 12px 8px;
+  position: relative;
+  color: white;
+  padding: 12px 8px;
 
+  z-index: 500px;
+  
 }
 
 .characters li a {
-text-decoration: none;
+  text-decoration: none;
 }
 
 .red_bumper {
-width: 100%;
-height: 6px;
-background-color: rgb(255, 0, 0);
+  width: 100%;
+  height: 6px;
+  background-color: rgb(255, 0, 0);
+
+  transition: height 0.2s ease;
+  position: absolute;
 }
+
+.characters li:hover .red_bumper { height:  80px;}
+
+
 article {padding: 20px;}
-/* select the h3 tag inside the article tag on the page*/
-/* a selector followed by a space and then ANOTHER selector gets a reference to the element and
-then the child element or elements inside of it*/
-article h3 {
-font-size: 2em;
-text-align: center;
-margin-bottom: 14px;
+ /* select the h3 tag inside the article tag on the page*/
+ /* a selector followed by a space and then ANOTHER selector gets a reference to the element and
+ then the child element or elements inside of it*/
+ article h3 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 14px;
+ }
+
+ /*select the p tag inside the article tag on the page*/
+ article p{
+  width: 80%;
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: center;
+  margin: 0 auto;
+ }
+
+ .sprite {
+  width: 150px;
+  height: 150px;
+  transition: all 1.5s ease;
+
+  background-image: url('../images/marvelSprites.jpg');
 }
 
-/*select the p tag inside the article tag on the page*/
-article p{
-width: 80%;
-font-size: 18px;
-line-height: 1.2;
-text-align: center;
-margin: 0 auto;
-}
-
-.sprite {
-width: 150px;
-height: 150px;
-
-background-image: url('../images/marvelSprites.jpg');
-}
-
-.sprite:hover { background-position-y: -150px !important; }
+.sprite:hover { background-position-y: -150px !important; transform: rotateZ(360deg); }
 
 #carol { background-position: -150px 0;}
 #clint { background-position: -300px 0;}
@@ -105,72 +116,72 @@ background-image: url('../images/marvelSprites.jpg');
 
 /*footer rules here*/
 footer {
-color: white;
-padding: 20px 0;
-text-align: center;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
 }
 
 .sticky_footer {
-position: sticky;
-top: 100%;
+  position: sticky;
+  top: 100%;
 
-height: 80px;
-background-color: rgb(0, 0, 0);
+  height: 80px;
+  background-color: rgb(0, 0, 0);
 }
 
 
 /*lightbox rulesb here*/
 
 .lightbox {
-width: 100vw; /*vw = viewport width => screen width */
-height: 100vh; /*vw = viewport height => screen width */
+  width: 100vw; /*vw = viewport width => screen width */
+  height: 100vh; /*vw = viewport height => screen width */
 
-position: absolute;
-top: 0;
-left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  background-color: rgba(0, 0, 0, 0.925);
+  background-image: url('../images/Cap_LB_Bg.png');
+  background-repeat: no-repeat;
 
-background-color: rgba(0, 0, 0, 0.925);
-background-image: url('../images/Cap_LB_Bg.png');
-background-repeat: no-repeat;
-
-background-size: 55vh;
-background-position: 40px bottom;
-
-display: none;
+  background-size: 55vh;
+  background-position: 40px bottom;
+  
+  display: none;
 }
 
 
 #lightbox2 { background-image: url('../images/Thor_LB_Bg.png');}
 
 .lightbox_close {
-position: relative;
-top: 20px;
-left:95%;
+  position: relative;
+  top: 20px;
+  left:95%;
 
-color: white;
-font-size: 3em;
+  color: white;
+  font-size: 3em;
 
-text-decoration: none;
+  text-decoration: none;
 
-font-weight: bolder;
+  font-weight: bolder;
 }
 
 .lightbox_close:hover { 
-opacity: 0.5; 
-color: brown;}
+  opacity: 0.5; 
+  color: brown;}
 
 .lightbox article {
-width: 55%;
-margin-left: 40%;
-padding-top: 50px;
+  width: 55%;
+  margin-left: 40%;
+  padding-top: 50px;
 }
 
 .lb_text, .lb_heading { text-align: left;}
 
 .lb_text {
-line-height: 1.6 !important;
-margin-left: 0;
-padding-top: 2em;
+  line-height: 1.6 !important;
+  margin-left: 0;
+  padding-top: 2em;
 }
 /* turn the lightbox on using the :target pseudo selector*/
 .lightbox:target { display: block; }
