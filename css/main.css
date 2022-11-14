@@ -76,7 +76,7 @@ header {
   position: absolute;
 }
 
-.characters li:hover .red_bumper { height:  80px;}
+.characters li .red_bumper { height:  80px;}
 
 
 article {padding: 20px;}
@@ -112,7 +112,7 @@ article {padding: 20px;}
 #clint { background-position: -300px 0;}
 #hulk { background-position: -450px 0;}
 #thor { background-position: -600px 0;}
-#window { background-position: -750px 0;}
+#window { background-position: -900px 0;}
 
 /*footer rules here*/
 footer {
@@ -130,7 +130,7 @@ footer {
 }
 
 
-/*lightbox rulesb here*/
+/*lightbox rules here*/
 
 .lightbox {
   width: 100vw; /*vw = viewport width => screen width */
